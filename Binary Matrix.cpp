@@ -17,7 +17,7 @@ int main()
             cin>>s;
             for(int j=0; j<m; j++)
             {
-               arr[i][j]=s[j]-'0' ;
+               arr[i][j]=s[j] - '0';
             }
         }
         int r=0,c=0;
@@ -35,7 +35,7 @@ int main()
             int sum = 0;
             for(int i=0; i<n; i++)
             {
-                sum ^= arr[j][i];
+                sum ^= arr[i][j];
             }
             if(sum) c++;
         }
