@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 
 using namespace std;
 
@@ -46,4 +46,61 @@ int main()
         }
     }
     return 0;
+}*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string copy(string s, int i, int j)
+{
+    string temp = "";
+    for(int k = i; k <= j; k++){
+        temp += s[k];
+    }
+    return temp;
 }
+
+void solve()
+{
+    string s;
+    cin >> s;
+    int q;
+    cin >> q;
+
+    while(q--)
+    {
+        int i, v;
+        cin >> i >> v;
+        s[i] = v + '0';  //
+
+        string temp = "1100";
+        int f = 0;
+
+        for(int i = 0; i <= s.size() - 4; i++)
+        {
+            string duplicate = copy(s, i, i + 3);  //
+            if(temp == duplicate){
+                f = 1;
+                break;
+            }
+        }
+
+        if(f){
+            cout << "YES" << "\n";
+        }
+        else{
+            cout << "NO" << "\n";
+        }
+    }
+}
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        solve();
+    }
+}
+
