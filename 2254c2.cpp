@@ -54,6 +54,6 @@ int main() {
         }
         
         ans[prv_shadow] = lst + 1;
-        for(int i = 0; i < n; ++i) cout << ans[b[i]] << " \n"[i == n - 1];
+        for(int j = 0; j < n; ++j) cout << ans[b[j]] << " \n"[j == n - 1];
     }
 }
