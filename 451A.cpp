@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 using namespace std;
 
 void fast_io() {
@@ -23,6 +23,30 @@ int main()
 
 
     solve();
+
+    return 0;
+}
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+
+    int i = 0;
+
+    while (n > 0 && m > 0) {
+        i++;
+        n--;
+        m--;
+    }
+
+    if (i % 2 == 0)
+        cout << "Malvika\n";
+    else
+        cout << "Akshat\n";
 
     return 0;
 }
