@@ -25,18 +25,27 @@ void solve()
     pair<int, int>pr(0,0);
     for (auto& pair_item : mp) {
         if (pair_item.second > pr.second) {
-            pr.first = pair_item.first;    // The actual number
-            pr.second = pair_item.second;  // How many times it appeared
+            pr.first = pair_item.first;
+            pr.second = pair_item.second;
         }
     }
     int max_occ = pr.second;
-    //cout<<max_occ<<"\n";
-    if(max_occ < n ){
-        cout<<sum<<"\n";
+    int rem = n - max_occ;
+    /*cout<<"Total sum "<<sum<<"\n";
+    cout<<"Max_occu "<<max_occ<<" "<<pr.first<<"\n";*/
+
+    if(max_occ >= rem  ){
+        max_occ = max_occ - (rem+2);
+        if(max_occ <= 0){
+          cout<<sum <<"\n";
+        }
+        else  cout<<sum - (pr.first * max_occ)<<"\n";
+
+
     }
-    /*else if(max_occ == n-1){
-        cout<<sum - pr.first<<"\n";
-    }*/
+    else if(max_occ < rem ){
+        cout<<sum <<"\n";
+    }
     else{
         cout<<arr[0] + arr[1]<<"\n";
     }
